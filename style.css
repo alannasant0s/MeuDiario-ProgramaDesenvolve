@@ -1,0 +1,80 @@
+    .main{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #a4cbf3;
+        border-radius: 0;
+    }
+        .introducao {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #8ea8c3;
+        border-radius: 8px;
+        border: 2px solid rgb(160, 160, 189);
+    }
+
+    .introducao h1 {
+        font-family: 'Arial', serif, sans-serif;
+        color: #23395B;
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .conteudo-entrada {
+        font-family: 'Arial', serif, sans-serif;
+        margin-bottom: 15px; 
+        line-height: 1.6; 
+        color: #333; /
+
+    }
+
+    .subtitulo {
+        font-family: 'Arial', serif, sans-serif;
+        color: #cbf7ed;
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+    .button-data {
+        background-color: #7a7978;
+        color: #cbf7ed;
+        border: none;
+        padding: 6px 8px;
+        border-radius: 4px;
+        cursor: pointer;  
+    }
+    .entrada {
+        
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #b2b9c0;
+        border-radius: 8px;
+        border: 2px solid rgb(160, 160, 189);
+    }
+    .rodape {  
+    text-align: center;
+    }
+
+    .reacoes {
+        display: flex;           
+        justify-content: flex-end; /* Alinha o botao da reação na direita */
+        margin-top: 10px;
+    }
+
+    .button-reacao {
+        padding: 8px 16px;
+        background: linear-gradient(to right, #406e8e,#8ea8c3,#cbf7ed);
+        color: black;
+        font-size: 0.9em;
+        font-family: 'Arial' serif, sans-serif;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        
+    }
+    .button-reacao:hover {
+        background-color: #23395B;
+        color: #cbf7ed;
+    }
