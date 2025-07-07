@@ -1,110 +1,189 @@
 @charset "UTF-8";
 
-    .main{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: #a4cbf3;
-        border-radius: 0;
-    }
-        .introducao {
-        text-align: center;
-        margin-bottom: 40px;
-        padding: 20px;
-        background-color: #8ea8c3;
-        border-radius: 8px;
-        border: 2px solid rgb(160, 160, 189);
-    }
-    .trilho{
-        width: 80px;
-        height: 30px;
-        background-color: #4d4d4d;
-        border-radius: 150px;
-        position: relative;
-        cursor: pointer;
-    }
-    .h3{font-family: 'Courier New', Courier, monospace;
+/* Estilos Gerais e Modo Claro (Padrão) */
+body {
+    background-color: #f0f4f8; /* Um azul bem clarinho para o fundo */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
 
-    }
-    .indicador{
-        width: 40px;
-        height: 30px;
-        background-color: #000;
-        border-radius: 50%;
-        transform: scale(.9);
-        position: absolute;
-        left: 0;
-        transition: .5s;
-    }
-    .introducao h1 {
-        font-family: 'Arial', serif, sans-serif;
-        color: #23395B;
-        padding: 10px 20px;
-        display: inline-block;
-        border-radius: 8px;
-        margin-bottom: 10px;
-    }
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    position: relative; /* Necessário para posicionar o botão do tema */
+}
 
-    .conteudo-entrada {
-        font-family: 'Arial', serif, sans-serif;
-        margin-bottom: 15px; 
-        line-height: 1.6; 
-        color: #333; 
-
-    }
-    .subtitulo {
-        font-family: 'Arial', serif, sans-serif;
-        color: #cbf7ed;
-        font-size: 1.1em;
-        margin-top: 10px;
-    }
-    .button-data {
-        background-color: #7a7978;
-        color: #cbf7ed;
-        border: none;
-        padding: 6px 8px;
-        border-radius: 4px;
-        cursor: pointer;  
-    }
-    .entrada {
-        
-        margin-bottom: 40px;
-        padding: 20px;
-        background-color: #b2b9c0;
-        border-radius: 8px;
-        border: 2px solid rgb(160, 160, 189);
-    }
-    .rodape {  
+.introducao {
     text-align: center;
-    }
+    margin-bottom: 50px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #dbe2ef;
+}
 
-    .reacoes {
-        display: flex;           
-        justify-content: flex-end; /* Alinha o botao da reação na direita */
-        margin-top: 10px;
-    }
+.introducao h1 {
+    font-family: 'Playfair Display', serif;
+    color: #23395B;
+    font-size: 2.5em;
+    margin: 0;
+}
 
-    .button-reacao {
-        padding: 8px 16px;
-        background: linear-gradient(to right, #406e8e,#8ea8c3,#cbf7ed);
-        color: black;
-        font-size: 0.9em;
-        font-family: 'Arial' serif, sans-serif;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        
-    }
-    .button-reacao:hover {
-        background-color: #23395B;
-        color: #cbf7ed;
-    }
-    .trilho.dark{
-        background-color: #c3c3c3;
+.subtitulo {
+    color: #555;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
 
-    }
-    .trilho.dark .indicador{
-        left: 40px;
-        background-color: white;
+.entrada {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #dbe2ef;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
 
-    }
+.titulo-entrada {
+    font-family: 'Playfair Display', serif;
+    color: #395886;
+    margin-top: 0;
+}
+
+.card-data {
+    color: #7a7978;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.conteudo-entrada {
+    line-height: 1.7;
+    color: #444;
+}
+
+.reacoes {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.button-reacao {
+    padding: 8px 16px;
+    background: #406e8e;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-reacao:hover {
+    background-color: #23395B;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- Botão de Modo Escuro --- */
+.theme-switch-container {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch-container h4 {
+    margin-right: 10px;
+    font-size: 0.8em;
+    color: #555;
+    font-weight: normal;
+}
+
+.trilho {
+    width: 60px;
+    height: 30px;
+    background-color: #cbd5e0;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.indicador {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.trilho.dark {
+    background-color: #4a5568;
+}
+
+.trilho.dark .indicador {
+    transform: translateX(29px);
+    background-color: #1a202c;
+}
+
+/* --- Estilos do Modo Dark --- */
+body.dark {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+body.dark .introducao,
+body.dark .entrada {
+    background-color: #2d3748;
+    border-color: #4a5568;
+}
+
+body.dark .introducao h1 {
+    color: #a0aec0;
+}
+
+body.dark .subtitulo {
+    color: #a0aec0;
+}
+
+body.dark .titulo-entrada {
+    color: #b8c8dc;
+}
+
+body.dark .card-data {
+    color: #a0aec0;
+}
+
+body.dark .conteudo-entrada {
+    color: #cdd8e7;
+}
+
+body.dark .button-reacao {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark .button-reacao:hover {
+    background-color: #718096;
+}
+
+body.dark .rodape {
+    color: #a0aec0;
+}
+
+body.dark .theme-switch-container h4 {
+    color: #a0aec0;
+}
